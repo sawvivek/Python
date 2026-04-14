@@ -78,3 +78,10 @@ Student.sort()
 print(Student)
 
 print(Student[1:3]) # it will give the elements from index 1 to 2 (3-1)
+Student.append("Ramesh, Sachin")
+print(Student)
+
+for i in Student:
+    print(i)
+    
+print(Student[:len(Student)])
