@@ -21,3 +21,4 @@ rand_even_num=random.randrange(0,10,2)
 print(rand_even_num)
 
 print(random.random())
+

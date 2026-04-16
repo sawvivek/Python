@@ -1,0 +1,32 @@
+Lists are ordered and mutable (changeable) collections.
+
+1. Modifying the List
+append(item): Adds a single item to the very end of the list.
+
+insert(index, item): Places an item at a specific position. All subsequent items shift to the right.
+
+extend([list]): Appends multiple elements from another list individually. It does not create a nested list.
+
+remove(item): Deletes the first occurrence of the specified value. Items shift left to fill the gap.
+
+clear(): Removes all elements, leaving an empty list [].
+
+2. Accessing & Organizing
+Indexing: Accessing starts at 0.
+Slicing [start:stop]: Extracts a portion of the list. Note that the start index is included, but the stop index is excluded.
+
+sort(): Rearranges items alphabetically or numerically in-place (modifies the original list).
+
+index(item): Finds the position of a specific value so you can update it via assignment (e.g., list[idx] = new_value).
+
+
+📊 Python Tuples & Data Processing:-
+Tuples are ordered but immutable (cannot be changed after creation).
+1. Key CharacteristicsImmutability: Once a tuple is created, you cannot add, remove, or change elements. Attempting to do so results in a Runtime Error.Syntax: Defined using parentheses (item1, item2).Use Case: Ideal for "freezing" data (like final exam scores) to prevent accidental modification.
+2. Advanced TechniquesList Comprehension: A concise way to create lists.Filtering: [m for m in marks if m >= 50] (Creates a list of marks $\ge 50$).Transformation: [min(m + 5, 100) for m in passed] (Adds bonus marks with a cap).Type Conversion: Use tuple(list_name) to convert a mutable list into a fixed tuple.Nested Structures: You can store tuples inside a list, such as indexed_scores = [(0, 83), (1, 97)], to pair data (like Index + Score).
+
+Feature,                   List [],                               Tuple ()
+Mutability,          Mutable (Can change),                   Immutable (Fixed)
+Performance,                Slower,                              Faster
+Methods,           "Many (append, remove, sort)",          "Few (count, index)"
+Common Use,        Frequent updates/dynamic data,          Constants/fixed records
