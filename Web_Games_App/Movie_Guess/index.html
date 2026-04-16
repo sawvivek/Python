@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Guess Arena</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="background-shape background-one"></div>
+    <div class="background-shape background-two"></div>
+
+    <main class="game-shell">
+      <header class="game-header">
+        <h1>Movie Guess Arena</h1>
+        <p>Type the movie title before hints run out.</p>
+      </header>
+
+      <section class="quick-help" aria-label="How to play">
+        <h2>How To Play</h2>
+        <p>
+          Start the game, read hints, and guess the movie title. Use fewer hints
+          for higher points.
+        </p>
+      </section>
+
+      <section class="status-panel" aria-label="Game status">
+        <div class="status-box">
+          <span class="status-label">Round</span>
+          <strong id="round">1</strong>
+        </div>
+        <div class="status-box">
+          <span class="status-label">Score</span>
+          <strong id="score">0</strong>
+        </div>
+        <div class="status-box">
+          <span class="status-label">Lives</span>
+          <strong id="lives">3</strong>
+        </div>
+        <div class="status-box">
+          <span class="status-label">Best</span>
+          <strong id="best">0</strong>
+        </div>
+      </section>
+
+      <section class="clue-panel" aria-live="polite">
+        <h2>Current Hint</h2>
+        <p id="hintText">Press Start Game to begin.</p>
+        <p id="hintProgress" class="hint-progress">Hint 0/0</p>
+        <div class="meta-row">
+          <span id="genreTag" class="pill">Genre: -</span>
+          <span id="yearTag" class="pill">Year: -</span>
+        </div>
+      </section>
+
+      <section class="controls-panel">
+        <label for="guessInput">Your Guess</label>
+        <div class="input-row">
+          <input
+            id="guessInput"
+            type="text"
+            autocomplete="off"
+            placeholder="Enter movie name"
+            disabled
+          />
+          <button id="submitBtn" disabled>Submit</button>
+        </div>
+        <div class="button-row">
+          <button id="hintBtn" class="ghost" disabled>Next Hint</button>
+          <button id="skipBtn" class="ghost" disabled>Skip</button>
+          <button id="quitBtn" class="danger" disabled>Quit</button>
+          <button id="startBtn">Start New Game</button>
+        </div>
+      </section>
+
+      <section class="message-panel" aria-live="assertive">
+        <p id="message">Welcome challenger! Start when ready.</p>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
